@@ -20,3 +20,12 @@ h1, h2, h3, h4, h5, h6{
     width: 100%;
     height: 100vh;
 }
+
+input[type="text"] {
+    font-family: 'Fira Code', monospace;
+    background: #013c4b9d;
+    color: #ffffff;
+    height: 660px;
+    width: 1270px;
+    font-size: 100px;
+    }
