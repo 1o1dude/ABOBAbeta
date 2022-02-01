@@ -1,6 +1,5 @@
 package io.denery.vadimbin.routers;
 
-
 import io.denery.vadimbin.handlers.BinHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,7 +7,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
-import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.server.RequestPredicates;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.RouterFunctions;
@@ -33,6 +31,12 @@ public class BinRouter {
                 ).andRoute(
                         RequestPredicates.GET("/edit"),
                         request -> binHandler.showSimplePage(request, edit)
+                ).andRoute(
+                        RequestPredicates.POST("/edit"),
+                        request -> ServerResponse.ok().build(s -> {
+                            logger.info("POST Test request: " + request.path());
+                            s.onComplete();
+                        })
                 );
     }
 }
