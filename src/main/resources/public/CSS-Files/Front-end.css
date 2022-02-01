@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6{
 
 .container {
     width: 100%;
-    max-width: 1320px;
+    max-width: 1920px;
     margin: 10;
 }
 
@@ -21,11 +21,43 @@ h1, h2, h3, h4, h5, h6{
     height: 100vh;
 }
 
-input[type="text"] {
+/*input[type="text"] {
     font-family: 'Fira Code', monospace;
     background: #013c4b9d;
     color: #ffffff;
-    height: 660px;
-    width: 1270px;
+    height: 1080px;
+    width: 1920px;
     font-size: 17px;
-    }
+}*/
+
+/*.sumbit{
+    width:  500px;
+    height: 1000px;
+    font-size:17px;
+    color: #ffffff;
+    font-family: 'Fira Code', monospace;
+    background: #ffffff00;
+}*/
+
+label,
+textarea {
+    font-size: .9rem;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+textarea {
+    padding: 10px;
+    max-width: 100%;
+    line-height: 1.5;
+    border-radius: 1px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+    background: #ffffff00;
+    color: #ffffff;
+    font-family: 'Fira Code', monospace;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
