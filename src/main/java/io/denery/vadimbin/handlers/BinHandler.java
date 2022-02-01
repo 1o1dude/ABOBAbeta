@@ -10,11 +10,23 @@ import reactor.core.publisher.Mono;
 
 @Component
 public final class BinHandler {
-
-    public Mono<ServerResponse> startPage(ServerRequest request, Resource html) {
+    public Mono<ServerResponse> showSimplePage(ServerRequest request, Resource html) {
         return ServerResponse
                 .ok()
                 .contentType(MediaType.TEXT_HTML)
                 .body(BodyInserters.fromResource(html));
+    }
+
+    public Mono<ServerResponse> redirectToAbout(ServerRequest request) {
+        return ServerResponse
+                .temporaryRedirect(request.uriBuilder().pathSegment("about").build())
+                .build();
+    }
+
+    public Mono<ServerResponse> saveBin(ServerRequest request) {
+        return ServerResponse
+                .ok()
+                .contentType(MediaType.TEXT_HTML)
+                .build();
     }
 }
