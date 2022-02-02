@@ -1,6 +1,7 @@
 package io.denery.vadimbin.routers;
 
 import io.denery.vadimbin.handlers.BinHandler;
+import io.denery.vadimbin.pojos.Bin;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -22,6 +23,7 @@ public class BinRouter {
             @Value("classpath:/public/edit-page.html") Resource edit,
             BinHandler binHandler
     ) {
+
         return RouterFunctions.route(
                         RequestPredicates.GET("/"),
                         binHandler::redirectToAbout
@@ -33,12 +35,11 @@ public class BinRouter {
                         request -> binHandler.showSimplePage(request, edit)
                 ).andRoute(
                         RequestPredicates.POST("/edit"),
-                        request -> {
-                            request.formData().subscribe(s -> {
-                                //s.get("story").forEach(logger::info);
-                            });
-                            return binHandler.showSimplePage(request, edit);
-                        }
+                        request -> binHandler.showSimplePage(request, edit)
+                                .doFinally(s -> {
+                                    logger.info("Received request: " + request.path());
+                                    //request.bodyToMono(Bin.class).subscribe(bin -> logger.info(bin.getText()));
+                                })
                 );
     }
 }
