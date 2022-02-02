@@ -33,10 +33,12 @@ public class BinRouter {
                         request -> binHandler.showSimplePage(request, edit)
                 ).andRoute(
                         RequestPredicates.POST("/edit"),
-                        request -> ServerResponse.ok().build(s -> {
-                            logger.info("POST Test request: " + request.path());
-                            s.onComplete();
-                        })
+                        request -> {
+                            request.formData().subscribe(s -> {
+                                //s.get("story").forEach(logger::info);
+                            });
+                            return binHandler.showSimplePage(request, edit);
+                        }
                 );
     }
 }
