@@ -13,7 +13,6 @@ public final class BinHandler {
     public Mono<ServerResponse> showSimplePage(ServerRequest request, Resource html) {
         return ServerResponse
                 .ok()
-                .contentType(MediaType.TEXT_HTML)
                 .body(BodyInserters.fromResource(html));
     }
 
