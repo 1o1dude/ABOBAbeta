@@ -40,10 +40,10 @@
 
     <div class="buttonAndIcons">
         <form action="" method="post">
-            <a><button><img width="27" height="27" src="img/save.png" alt=""></button></a>
+            <a><button><img width="27" height="27" src="img/save.png" title="Save-сохраняет данные при нажатие на кнопку" alt=""></button></a>
         </form>
-        <a href="edit"><button><img width="27" height="27" src="img/add-new-page.png" alt=""></button></a><br>
-        <input name="guruweba_example_file" type="file" /><br>
+        <a href="edit"><button><img width="27" height="27" src="img/add-new-page.png" title="New file-создаёт новый файл при нажатие на кнопку" alt=""></button></a><br>
+        <!--<input name="guruweba_example_file" type="file" /><br>-->
         <!--<input name="guruweba_example_reset" type="reset" value="Очистить поля" />-->
         <!--<input name="guruweba_example_submit" type="submit" value="Отправить" />-->
         <!--<input type="text" class="text" name="" />-->
@@ -52,7 +52,7 @@
 
         <label for="story">enter your text:</label>
 
-        <textarea id="story" name="story"
+        <textarea maxlength="20000" id="story" name="story"
           rows="15" cols="125">
         </textarea>
 
