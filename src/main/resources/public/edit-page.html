@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-
     <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
@@ -27,6 +26,7 @@
     <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <link rel="stylesheet" href="css-files/modal window.css">
     <link rel="stylesheet" href="css-files/front-end.css">
     <title>abobus</title>
 </head>
@@ -39,36 +39,38 @@
     </div>
 
 <!--<<<<<<< HEAD-->
-    <div class="buttonAndIcons">
-        <form action="" method="post">
-            <a><button><img width="27" height="27" src="img/save.png" title="Save-сохраняет данные при нажатие на кнопку" alt=""></button></a>
-        </form>
-        <a href="edit"><button><img width="27" height="27" src="img/add-new-page.png" title="New file-создаёт новый файл при нажатие на кнопку" alt=""></button></a><br>
         <!--<input name="guruweba_example_file" type="file" /><br>-->
         <!--<input name="guruweba_example_reset" type="reset" value="Очистить поля" />-->
         <!--<input name="guruweba_example_submit" type="submit" value="Отправить" />-->
         <!--<input type="text" class="text" name="" />-->
 
-    <div class="sumbit">
-
-        <label for="story">enter your text:</label>
-
-        <textarea maxlength="20000" id="story" name="story"
-          rows="15" cols="125">
-        </textarea>
-
-    </div>
-
-=======
+<!--=======-->
+<!--ДАНЯ СУКА, НИЧЕГО НЕ ТРОГАЙ НЕ СОГЛАСОВАННО, Я ЗАЕБАЛСЯ НАСТРАИВАТЬ ВСЁ.-->
     <div class="io">
         <label for="story">enter your text:</label>
-        <a href="edit"><button><img width="27" height="27" src="img/add-new-page.png" alt=""></button></a><br>
+        <!--<a href="edit"><button><img width="27" height="27" src="img/add-new-page.png" title="New file-создаёт новый файл при нажатие на кнопку" alt=""></button></a><br>-->
         <form method="post">
-            <a><button><img width="27" height="27" src="img/save.png" alt=""></button></a>
+            <a><button><img width="27" height="27" src="img/save.png" title="Save-сохраняет данные при нажатие на кнопку" alt=""></button></a>
             <textarea id="story" name="story" rows="15" cols="125"></textarea>
         </form>
->>>>>>> e3bb26b0fb13bbac55f7a376ddbd43165ed14fa9
+<!-- >>>>>>> e3bb26b0fb13bbac55f7a376ddbd43165ed14fa9-->
     </div>
+
+<!--modal window-->
+    <body>
+   
+        <div id="zatemnenie">
+          <div id="okno">
+            Сохранить текст?<br>
+            <a href="#" class="close">Сохранить</a>
+            <a href="#" class="close">Закрыть</a>
+          </div>
+        </div>
+         
+        <a href="#zatemnenie"><button><img width="27" height="27" src="img/save.png" title="Save-сохраняет данные при нажатие на кнопку" alt=""></button></a>
+     
+      </body>
+    </html>
 
 </body>
 </html>
