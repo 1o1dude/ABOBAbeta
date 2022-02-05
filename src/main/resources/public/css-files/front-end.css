@@ -1,8 +1,21 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik+One&subset=latin,cyrillic);
+.gradient-text {
+  font-family: 'Rubik One', sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #1f4a8f 33%, #45c4e4 66%, #7be2c3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #224479;
+  display: table;
+  margin: 20px auto;
+}
+
 body{
     font-family: 'Fira Code', monospace;
     margin: 5;
-    background: #002b36;
-    color: #0a5263;
+    background: linear-gradient(45deg, #a0f3d7, #8ecfec);
+    color: #87f8e9;
     font-size: 15px;
 }
 
@@ -44,17 +57,17 @@ textarea {
     font-size: .9rem;
     font-size: 17px;
     letter-spacing: 1px;
-    color: #18788d;
+    color: #57daa7;
 }
 textarea {
     padding: 10px;
     max-width: 100%;
     line-height: 1.5;
     border-radius: 1px;
-    border: 1px solid rgba(204, 204, 204, 0);
-    box-shadow: 1px 1px 1px rgba(153, 153, 153, 0);
-    background: #ffffff00;
-    color: #ffffff;
+    border: 4px solid rgb(120, 214, 183);
+    box-shadow: 1px 1px 1px rgb(107, 172, 189);
+    background: #d7ffec;
+    color: #000000;
     font-family: 'Fira Code', monospace;
 }
 

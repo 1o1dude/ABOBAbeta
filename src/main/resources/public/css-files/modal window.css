@@ -12,7 +12,7 @@
     height: 50px;
     text-align: center;
     padding: 15px;
-    border: 5px solid #084452;
+    border: 5px solid #47afc7;
     border-radius: 10px;
     color: #ffffff;
     position: absolute;
@@ -21,17 +21,17 @@
     bottom: 0;
     left: 0;
     margin: auto;
-    background: #0a5263;
+    background: linear-gradient(45deg, #83beee, #76eed4);
   }
   #zatemnenie:target {display: block;}
   .close {
     display: inline-block;
-    border: 2px solid #084452;
+    border: 2px solid #287c8f;
     color: #ffffff;
     padding: 0 12px;
     margin: 10px;
     text-decoration: none;
-    background: #0d6579;
+    background: #26abc9;
     font-size: 14pt;
     cursor:pointer;
   }

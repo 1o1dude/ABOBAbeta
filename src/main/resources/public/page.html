@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--import fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,19 +31,48 @@
     <meta name="theme-color" content="#ffffff">
     <!--its a import CSS-Files-->
     <link rel="stylesheet" href="css-files/front-end.css">
-    <title>ABOBA</title>
-
+    <link rel="stylesheet" href="css/window with animation.css">
+    <title>Modal Windows</title>
 </head>
 <body>
-    <div class="colider">
+    
+    <body>
 
-        <h1>ABOBA.COM</h1>
-
-    </div>
-
-    <div class="buttonAndIcons">
-        <a><button><img width="27" height="27" src="img/save.png" title="Save-сохраняет данные при нажатие на кнопку" alt=""></button></a>
-        <a href="edit"><button><img width="27" height="27" src="img/add-new-page.png" title="New file-создаёт новый файл при нажатие на кнопку" alt=""></button></a>
-    </div>
+        <div class="wrapper">
+            <div class="button" onclick="document.body.classList.add('active')">
+                <span class="button-text">Hello</span>
+                <div class="button-backgrounds">
+                    <div class="button-circle button-circle1"></div>
+                    <div class="button-circle button-circle2"></div>
+                    <div class="button-circle button-circle3"></div>
+                    <div class="button-circle button-circle4"></div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="wrapper">
+            <div class="popup">
+                <div class="popup-inside">
+                    <div class="backgrounds">
+                        <div class="background"></div>
+                        <div class="background background2"></div>
+                        <div class="background background3"></div>
+                        <div class="background background4"></div>
+                        <div class="background background5"></div>
+                        <div class="background background6"></div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content-wrapper">
+                        <h1>Welcome to the ABOBA.COM</h1>
+                        <p>this is a website for the purposes of the insertion component.</p>
+                        <a href="main-page.html"><p class="try-again" onclick="document.body.classList.remove('active')">Go to the main page of the site</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </body>
+    
 </body>
 </html>
